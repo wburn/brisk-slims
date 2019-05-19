@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>MolPage Project</title>
+  
+
+  <link rel="shortcut icon" href="./images/favicon.ico">
+  <link type="text/css" rel="stylesheet" href="./formstyle.css"></head>
+<body>
+<!--
+  <table>
+    <tr>
+      <td><img src="./molpagelogo_ofic2a.gif"></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>
+      <td valign="center"><img src="./galva1_2r.gif"></td>
+    </tr>
+  </table>
+-->
+  <br>
+  <table id="contentblock" cellpadding="5" cellspacing="0">
+    <tbody><tr id="nav">
+      <td><a></a><br>
+</td>
+      <td width="100%"><a></a><br>
+</td>
+    </tr>
+  </tbody></table>
+  <br>
+  <table>
+    <thead>
+      <tr>
+        <th id="larger" style="width: 100%;" width="100%">Administrative tables help page</th>
+	</tr>
+     </thead>
+  </table>
+
+<br><b>Administrative tables</b> page allows to access all configuration tables of the system.
+All users who are given access to this page also have full access rights to all the data shown here.<br>
+<br>
+Tables accessible from here can be categorised in three groups:<br>
+<b><br>
+Access right management</b>. Table <b>Users</b> contain information about all the users who can log in the system. <br>
+<br>
+- Fields <b>Login name</b> and <b>User password</b> contain the
+information for logging into the system and should be nonempty (note
+that passwords are stored in database in unencrypted form, i.e. they
+are available to everybody having access to <b>Users</b> table).&nbsp; <br>
+- Field <b>User rights</b> contains the information about the users access rights and should contain one of the following values: <b>A0, A1,&nbsp; G0, G1,&nbsp; O1, O1, V0, V1</b>. Prefixes "V", "O", "G" and "A" correspondingly denote the following access rights:<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; V -&nbsp; <i>view only access</i>. All tables can be viewed, no changes are allowed.  
+<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; O - <i>user data access</i>. All tables can be viewed and new person entries added. Editing and deleting is possible only 
+for data entered by this user. Also new samples/aliquots can be created only to persons/samples entered by this user. 
+<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; G - <i>group data access</i>. All tables can be viewed and new person entries added. Editing and deleting is possible only 
+for data entered by user from the same MolPAGE partner. Also new samples/aliquots can be created only to persons/samples 
+entered by user from the same MolPAGE partner. 
+<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; A - <i>full access</i>. All tables can be viewed and all data added/deleted/edited.
+<br>
+Suffix "0" denotes that the user doesn't have the access to <b>Administrative tables</b>
+page, suffix "1" denotes that the user has such access. Note, that
+since passwords are not encrypted, the access rights values V1, O1 and
+G1 should be avoided.<br>
+- Field <b>Partner</b> may contain a foreign key to <b>Partner</b>, this user is associated with, however this may be left undefined.<br>
+<br>
+User Id's are used as foreign keys in practically all other tables,
+therefore it will be possible to delete a user from the system only if
+the database doesn't contain any records created or modified by this
+user.<br>
+<b><br>
+<br>Configuration of web pages</b>. This group contains three tables: <b>Person matadata</b>, <b>Sample metadata</b> and <b>Aliquot metadata</b>. Each of them allows to copnfigure fields that are respectively shown in <b>Persons</b>, <b>Samples</b> and <b>Aliquots</b> web pages. For each of the properties available through these web pages the following options can be configured:<br>
+<br>
+- <b>Short name</b>. The column name shown on <b>List of persons/sample/aliquots</b>&nbsp; page.<br>
+- <b>Long name</b>. The column name shown on <b>Edit</b>&nbsp; page.<br>
+- <b>View column number</b>. Column position on <b>List of persons/sample/aliquots</b>&nbsp; page. Value "0" means that the property is not shown. Column with a larger <b>View column number</b> is displayed to the right from column with smaller (non-zero) number, however these numbers are not required to be consecutive.<br>
+- <b>Sort in view</b>. If <b>true</b> data on <b>List of persons/sample/aliquots</b>&nbsp; page will be sorted according to the values of this property on the click on column name.<br>
+- <b>Report column number</b>. Column position on <b>Reports </b>page.&nbsp; (See for <b>View column number</b> more details.)<br>
+- <b>Show in report</b>. If <b>true</b> the property will be shown in <b>Reports</b> page by default.<br>
+- <b>Sort in report</b>. If <b>true</b> data on <b>Reports </b>page will be sorted according to the values of this property on the click on column name.<br>
+- <b>Filter in report</b>. If <b>true</b> the property will be available in search filter on <b>Reports</b> page.<br>
+<br>
+<b>Configuration of fixed vocabularies </b>. This group contains 18 tables: <b>Aliquot
+concentration units, Aliquot volume units, Aliquot fitnesses, Aliquot
+locations, Person disease stata, Person ethnicities, Planned users,
+Person sources, Processing options, Processing protocols, Reception
+stata, Relation types, Sample locations, Sample types, Sample subtypes,
+Person genders, Storage conditions, Transport conditions</b>. <br>
+<br>
+- Most of these tables (apart from <b>Relation types</b>, <b>Sample types</b> and <b>Sample subtypes</b>)&nbsp; contain just fixed vocabulary terms for specific property and can be freely edited (however, you will be able to delete an entry only if there will be no records in the database referencing it).<br>
+-&nbsp; Table <b>Sample types</b> in addition contains field <b>Abbreviation</b>,
+used for automatic generation of sample id's. Also the value of this
+field may be freely changed (however change of the value will not
+affect id's of samples that are already in database).<br>
+- Table <b>Sample subtypes</b> contains list of all subtypes for a
+given sample type. To add a new sample subtype you already need to have
+a corresponding sample type in <b>Sample types</b> table.<br>
+- Table <b>Relation types</b> lists all relations that can be defined between persons in <b>Persons</b> page.&nbsp; The contents can be freely edited, however, since<br>
+reverse relations are identified just by names in this table you should exersise care in doing this.<br>
+<br>
+
+
+  <table id="contentblock" cellpadding="5" cellspacing="0">
+    <tbody><tr id="nav">
+	 <td><a></a><br>
+</td>
+       <td width="100%"><a></a><br>
+</td>
+    </tr>
+  </tbody></table>
+</body></html>

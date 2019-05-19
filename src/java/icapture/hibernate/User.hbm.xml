@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="icapture.hibernate">
+  <class name="User" table="tblusers">
+    <id column="userID" name="id">
+      <generator class="native"/>
+    </id>
+    <property column="firstName" name="visibleName" not-null="true"/>
+    <property column="userName" name="loginName" not-null="true"/>
+    <property column="rights" name="rights" not-null="true"/>
+    <property column="created" name="createDate" not-null="true"/>
+    <property column="modified" name="modifDate"/>
+    <property column="commentary" name="comment"/>
+    <property column="password" name="password" not-null="true"/>
+    <property column="userTypeID" name="userTypeID"/>
+    <property column="initials" name="initials"/>
+    <property column="lastName" name="lastName"/>
+    <property column="email" name="email" not-null="false"/>
+    <!--
+		<bag name="persons_cr" lazy="true" inverse="true" cascade="save-update">
+			<key column="created_by"/>
+			<one-to-many class="Person"/>
+		</bag>
+		<bag name="persons_mod" lazy="true" inverse="true" cascade="save-update">
+			<key column="modified_by"/>
+			<one-to-many class="Person"/>
+		</bag>
+		<bag name="samples_cr" lazy="true" inverse="true" cascade="save-update">
+			<key column="created_by"/>
+			<one-to-many class="Sample"/>
+		</bag>
+		<bag name="samples_mod" lazy="true" inverse="true" cascade="save-update">
+			<key column="modified_by"/>
+			<one-to-many class="Sample"/>
+		</bag>
+		<bag name="relat_cr" lazy="true" inverse="true" cascade="save-update">
+			<key column="created_by"/>
+			<one-to-many class="Relation"/>
+		</bag>
+		<bag name="relat_mod" lazy="true" inverse="true" cascade="save-update">
+			<key column="modified_by"/>
+			<one-to-many class="Relation"/>
+		</bag>
+		<bag name="reltype_cr" lazy="true" inverse="true" cascade="save-update">
+			<key column="created_by"/>
+			<one-to-many class="RelationType"/>
+		</bag>
+		<bag name="reltype_mod" lazy="true" inverse="true" cascade="save-update">
+			<key column="modified_by"/>
+			<one-to-many class="RelationType"/>
+		</bag>
+		<bag name="sampletype_cr" lazy="true" inverse="true" cascade="save-update">
+			<key column="created_by"/>
+			<one-to-many class="SampleType"/>
+		</bag>
+		<bag name="sampletype_mod" lazy="true" inverse="true" cascade="save-update">
+			<key column="modified_by"/>
+			<one-to-many class="SampleType"/>
+		</bag>
+		<bag name="ethnicities_cr" lazy="true" inverse="true" cascade="save-update">
+			<key column="created_by"/>
+			<one-to-many class="Ethnicity"/>
+		</bag>
+		<bag name="ethnicities_mod" lazy="true" inverse="true" cascade="save-update">
+			<key column="modified_by"/>
+			<one-to-many class="Ethnicity"/>
+		</bag>
+		<bag name="sexes_cr" lazy="true" inverse="true" cascade="save-update">
+			<key column="created_by"/>
+			<one-to-many class="Sex"/>
+		</bag>
+		<bag name="sexes_mod" lazy="true" inverse="true" cascade="save-update">
+			<key column="modified_by"/>
+			<one-to-many class="Sex"/>
+		</bag>
+		<bag name="aliquots_cr" lazy="true" inverse="true" cascade="save-update">
+			<key column="created_by"/>
+			<one-to-many class="Aliquot"/>
+		</bag>
+		<bag name="aliquots_mod" lazy="true" inverse="true" cascade="save-update">
+			<key column="modified_by"/>
+			<one-to-many class="Aliquot"/>
+		</bag>
+-->
+  </class>
+</hibernate-mapping>

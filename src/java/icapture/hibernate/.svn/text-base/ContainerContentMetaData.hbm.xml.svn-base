@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="icapture.hibernate">
+  <class name="ContainerContentMetaData" table="tblcontainercontents_meta_data">
+    <id column="sysid" name="id">
+      <generator class="native"/>
+    </id>
+    <property column="property_name" name="visibleName" not-null="true"/>
+    <property column="short_name" name="shortName"/>
+    <property column="long_name" name="longName"/>
+    <property column="view_column_number" name="viewColumnNumber"/>
+    <property column="is_sortable" name="sortable"/>
+    <property column="is_editable" name="editable"/>
+    <property column="show_in_reports" name="showInReports"/>
+    <many-to-one column="created_by" name="creator" not-null="true"/>
+    <many-to-one column="modified_by" name="modifier"/>
+    <property column="created" name="createDate" not-null="true"/>
+    <property column="modified" name="modifDate"/>
+    <property column="commentary" name="comment"/>
+    <property column="userID" name="userID"/>
+  </class>
+</hibernate-mapping>

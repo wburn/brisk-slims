@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="icapture.hibernate">
+  <class name="Shipment" table="tblshipment">
+    <id column="shipmentID" name="id">
+      <generator class="native"/>
+    </id>
+    <property column="shipmentID" insert="false" name="shipmentID" not-null="true" update="false"/>
+    <property column="shipmentName" name="shipmentName" not-null="false"/>
+    <property column="shipDate" name="shipDate" not-null="false" type="date"/>
+    <many-to-one class="ShippedTo" column="shippedToID" name="shippedTo" not-null="false"/>
+    <property column="shipAction" name="shipAction" not-null="false"/>
+    <property column="comments" name="comments" not-null="false"/>
+    <many-to-one column="created_by" name="creator" not-null="true"/>
+    <many-to-one column="modified_by" name="modifier"/>
+    <property column="created" name="createDate" not-null="true"/>
+    <property column="modified" name="modifDate"/>
+  </class>
+</hibernate-mapping>

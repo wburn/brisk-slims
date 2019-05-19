@@ -1,0 +1,72 @@
+<html>
+<head>
+  <title>MolPage Project</title>
+
+  <link rel="shortcut icon" href="./images/favicon.ico">
+  <link type="text/css" rel="stylesheet" href="./formstyle.css">
+
+</head>
+
+<script  type="text/javascript" language="javascript">
+</script>
+
+<body>
+<!--
+  <table>
+    <tr>
+      <td><img src="./molpagelogo_ofic2a.gif"></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>
+      <td valign="center"><img src="./galva1_2r.gif"></td>
+    </tr>
+  </table>
+--> 
+ <br>
+  <table id="contentblock" cellPadding = "5" cellSpacing = "0">
+    <tr id="nav">
+      <td><a></a></td>
+      <td width="100%"><a></a></td>
+    </tr>
+  </table>
+  <br>
+  <table>
+    <thead>
+      <tr>
+        <th id="larger" width="100%" style="filter:glow(color=#FFCCaa,strength=8);width:100%">Display settings help page</th>
+	</tr>
+     </thead>
+  </table>
+
+<br><b>DefineViewTables</b> page allows to select which columns and in which order will be displayed in Persons/Samples/Aliquots pages.
+To change the settings, enter numbers of columns (starting from 1) in which the fields of interest should be displayed.
+Column number <i>0</i> means that the corresponding field will not be displayed. 
+<br>
+<br>One of the intended uses for filed selection is for generation of reports. Select the fields which you wish to
+see in report (and in which order), then go to Persons/Samples/Aliquots pages and export the date from this page by
+clicking on "Export" tab. Data will be saved in tab-delimited format.
+<br>
+<br>Display settings are preserved only within the current session. After the next login the default settings will be restored.
+<br>
+<br>Links to other help pages: 
+
+<br><br><a href="./help_login.html" target="popup" >
+	Login help page</a>
+<br><a href="./help_persons.html" target="popup" >
+	Persons help page</a>
+<br><a href="./help_samples.html" target="popup" >
+	Samples help page</a>
+<br><a href="./help_aliquots.html" target="popup" >
+	Aliquots help page</a>
+<br><a href="./help_search.html" target="popup" >
+	Filter settings help page</a>
+<br><a href="./help_settings.html" target="popup" >
+	Display settings help page</a>
+
+<br>
+  <table id="contentblock" cellPadding = "5" cellSpacing = "0">
+    <tr id="nav">
+	 <td><a></a></td>
+       <td width="100%"><a></a></td>
+    </tr>
+  </table>
+</body>
+</html>

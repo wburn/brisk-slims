@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="icapture.hibernate">
+  <class name="ContainerContent" table="tblcontainercontents">
+    <id column="containerContentsID" name="id">
+      <generator class="native"/>
+    </id>
+    <property column="containerContentsID" insert="false" name="containerContentsID" not-null="true" update="false"/>
+    <many-to-one class="ContainerContent" column="parentID" name="parent" not-null="false"/>
+    <property column="contaminated" name="contaminated" not-null="true"/>
+    <many-to-one class="Container" column="containerID" name="container" not-null="true"/>
+    <property column="PLATEROW" name="row" not-null="true"/>
+    <property column="PLATECOLUMN" name="column" not-null="true"/>
+    <many-to-one class="Sample" column="sampleID" name="sample" not-null="true"/>
+    <property column="volume" name="volume" not-null="false"/>
+    <property column="concentration" name="concentration" not-null="false"/>
+    <property column="dilution" name="dilution" not-null="false"/>
+    <property column="comments" name="comments" not-null="false"/>
+    <property column="amplificationDate" name="amplificationDate" not-null="false"/>
+    <property column="barcode" name="barcode" not-null="false"/>
+    <property column="modified" name="modifDate"/>
+    <property column="created" name="createDate"/>
+    <many-to-one class="MaterialType" column="materialTypeID" name="materialType" not-null="true"/>
+  </class>
+</hibernate-mapping>

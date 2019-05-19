@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="icapture.hibernate">
+  <class name="ControlWell" table="tblControlWells">
+    <id column="controlWellID" name="id">
+      <generator class="native"/>
+    </id>
+    <property column="controlWellID" insert="false" name="controlWellID" not-null="true" update="false"/>
+    <many-to-one class="Container" column="containerID" name="container" not-null="true"/>
+    <property column="row" name="row" not-null="true"/>
+    <property column="column" name="column" not-null="true"/>
+    <many-to-one class="Control" column="controlID" name="control" not-null="true"/>
+    <property column="volume" name="volume" not-null="false"/>
+  </class>
+</hibernate-mapping>

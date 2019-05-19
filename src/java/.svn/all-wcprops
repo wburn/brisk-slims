@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/!svn/ver/3/trunk/src/java
+END
+hibernate.cfg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/src/java/hibernate.cfg.xml
+END
+hibernate-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/src/java/hibernate-service.xml
+END
+ehcache.xml
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2/trunk/src/java/ehcache.xml
+END
+oscache.properties
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/src/java/oscache.properties
+END
+treecache.xml
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2/trunk/src/java/treecache.xml
+END
+cvs-dup-eol-fixer
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/src/java/cvs-dup-eol-fixer
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/src/java/log4j.properties
+END
+hibernate.properties
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/src/java/hibernate.properties
+END
+cache.ccf
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2/trunk/src/java/cache.ccf
+END

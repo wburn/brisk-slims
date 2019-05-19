@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1_subreport1" pageWidth="802" pageHeight="539" orientation="Landscape" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Empty">
+	<parameter name="freezerID" class="java.lang.Long" isForPrompting="false"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Documents and Settings\\tvanrossum\\My Documents\\NetBeansProjects\\SampleTracking\\src\\java\\reports\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+        tblcontainers.*,
+        tblcontainertypes.description AS typDesc,
+        tblshippedto.description AS shipDesc
+        FROM tblcontainers
+        LEFT JOIN tblcontainertypes ON tblcontainers.containerTypeID=tblcontainertypes.containertypeID
+        LEFT JOIN  tblshippedto ON  tblcontainers.shippedToID=tblshippedto.shippedToID
+        WHERE freezerID = $P{freezerID}]]>
+	</queryString>
+	<field name="containerID" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="containerTypeID" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="containerName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="freezerID" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="shelf" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="discarded" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="shippedOut" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="shippedDate" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ShippedToID" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="typDesc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="shipDesc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<detail>
+		<band height="38">
+			<rectangle>
+				<reportElement x="0" y="0" width="539" height="20" forecolor="#E0FAE0" backcolor="#EAFAEA"/>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="3" y="0" width="125" height="20"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{containerName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="268" y="0" width="30" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$F{shelf}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="388" y="0" width="60" height="20">
+					<printWhenExpression><![CDATA[$F{shippedOut}]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{shippedDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="464" y="0" width="75" height="20">
+					<printWhenExpression><![CDATA[$F{shippedOut}]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{shipDesc}]]></textFieldExpression>
+			</textField>
+			<subreport isUsingCache="false" runToBottom="false">
+				<reportElement positionType="Float" mode="Transparent" x="19" y="20" width="520" height="18" isRemoveLineWhenBlank="true" backcolor="#F0FBF2"/>
+				<subreportParameter name="containerID">
+					<subreportParameterExpression><![CDATA[$F{containerID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "ContainerContents_by_containerID.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement mode="Transparent" x="298" y="0" width="61" height="20" forecolor="#000000" backcolor="#FFFFFF">
+					<printWhenExpression><![CDATA[$F{discarded}]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Discarded]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="235" y="0" width="33" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Shelf:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="539" height="1"/>
+			</line>
+			<staticText>
+				<reportElement mode="Transparent" x="359" y="0" width="29" height="20" forecolor="#000000" backcolor="#FFFFFF">
+					<printWhenExpression><![CDATA[$F{shippedOut}]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Sent]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="448" y="0" width="16" height="20" forecolor="#000000" backcolor="#FFFFFF">
+					<printWhenExpression><![CDATA[$F{shippedOut}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[ to ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="128" y="0" width="107" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{typDesc}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

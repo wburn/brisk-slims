@@ -1,0 +1,75 @@
+<html>
+<head>
+  <title>MolPage Project</title>
+
+  <link rel="shortcut icon" href="./images/favicon.ico">
+  <link type="text/css" rel="stylesheet" href="./formstyle.css">
+
+</head>
+
+<body>
+<!--
+  <table>
+    <tr>
+      <td><img src="./molpagelogo_ofic2a.gif"></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>
+      <td valign="center"><img src="./galva1_2r.gif"></td>
+    </tr>
+  </table>
+-->
+  <br>
+  <table id="contentblock" cellPadding = "5" cellSpacing = "0">
+    <tr id="nav">
+      <td><a></a></td>
+      <td width="100%"><a></a></td>
+    </tr>
+  </table>
+  <br>
+  <table>
+    <thead>
+      <tr>
+        <th id="larger" width="100%" style="filter:glow(color=#FFCCaa,strength=8);width:100%">Login help page</th>
+	</tr>
+     </thead>
+  </table>
+
+<br>To access sample database you need a valid login name and a password. If you think that you should have access 
+to this page, but don't have login name/password you can contact the current system administrator (see below).    
+<br>
+<br>Different users might have different access rights to sample database. Current options include:
+<br>
+<br>- <i>View only access</i>. All tables can be viewed, no changes are allowed.  
+<br>- <i>User data access</i>. All tables can be viewed and new person entries added. Editing and deleting is possible only 
+for data entered by this user. Also new samples/aliquots can be created only to persons/samples entered by this user. 
+<br>- <i>Group data access</i>. All tables can be viewed and new person entries added. Editing and deleting is possible only 
+for data entered by user from the same MolPAGE partner. Also new samples/aliquots can be created only to persons/samples 
+entered by user from the same MolPAGE partner. 
+<br>- <i>Full access</i>. All tables can be viewed and all data added/deleted/edited.
+<br>
+<br>In addition <i>Administrator tables</i> page is available for viewing/editing only to users with specific administrator rights.
+
+<br>
+<br>Links to other help pages: 
+
+<br><br><a href="./help_login.html" target="popup" >
+	Login help page</a>
+<br><a href="./help_persons.html" target="popup" >
+	Persons help page</a>
+<br><a href="./help_samples.html" target="popup" >
+	Samples help page</a>
+<br><a href="./help_aliquots.html" target="popup" >
+	Aliquots help page</a>
+<br><a href="./help_search.html" target="popup" >
+	Filter settings help page</a>
+<br><a href="./help_settings.html" target="popup" >
+	Display settings help page</a>
+
+<br>
+  <table id="contentblock" cellPadding = "5" cellSpacing = "0">
+    <tr id="nav">
+	 <td><a></a></td>
+       <td width="100%"><a></a></td>
+    </tr>
+  </table>
+</body>
+</html>

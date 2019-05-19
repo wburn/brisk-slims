@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="icapture.hibernate">
+  <class name="GenotypingRunSnpStatus" table="tblgenotypingrunsnpstatus">
+    <composite-id>
+      <key-property name="genotypingRunID"/>
+      <key-property name="snpID"/>
+    </composite-id>
+    <!--many-to-one name="genotypingRun" column="genotypingRunID" not-null="true"
+                    insert="false" update="false"/>
+    <many-to-one name="snp" column="snpID" not-null="true"
+                    insert="false" update="false"/-->
+    <property column="valid" name="valid" not-null="true"/>
+    <property column="strand" name="strand" not-null="true"/>
+  </class>
+</hibernate-mapping>

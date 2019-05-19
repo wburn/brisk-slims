@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="icapture.hibernate">
+  <class name="Gene" table="tblgene">
+    <id column="geneID" name="id">
+      <generator class="native"/>
+    </id>
+    <property column="geneID" insert="false" name="geneID" not-null="true" update="false"/>
+    <property column="name" name="name" not-null="true"/>
+    <property column="public" name="publicFlag" not-null="true"/>
+    <property column="entrezGeneID" name="entrezGeneID" not-null="false"/>
+    <property column="arm" name="arm" not-null="false"/>
+  </class>
+</hibernate-mapping>

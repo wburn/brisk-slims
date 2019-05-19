@@ -1,0 +1,101 @@
+<html>
+<head>
+  <title>Help Patient Sample Management System</title>
+
+  <link rel="shortcut icon" href="./images/favicon.ico">
+  <link type="text/css" rel="stylesheet" href="./formstyle.css">
+
+</head>
+
+<script  type="text/javascript" language="javascript">
+</script>
+
+<body>
+<!--
+  <table>
+    <tr>
+      <td><img src="./molpagelogo_ofic2a.gif"></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>
+      <td valign="center"><img src="./galva1_2r.gif"></td>
+    </tr>
+  </table>
+-->
+ <br>
+  <table id="contentblock" cellPadding = "5" cellSpacing = "0">
+    <tr id="nav">
+      <td><a></a></td>
+      <td width="100%"><a></a></td>
+    </tr>
+  </table>
+  <br>
+  <table>
+    <thead>
+      <tr>
+        <th id="larger" width="100%" style="filter:glow(color=#FFCCaa,strength=8);width:100%">Reports help page</th>
+	</tr>
+     </thead>
+  </table>
+
+<br><b>Reports</b> page allows to generate reports containing entries about Persons, Samples or Aliquots with the
+values of selected fields equal to the values defined in the corresponding filters. It is also possible to specify
+which fields for Persons, Samples or Aliquots entries will be displayed in the generated report.
+<br>
+<br>To generate report, first define the filters that will be used. To define a filter for either for Persons, Samples
+or Aliquots press the corresponding of "Persons/Samples/Aliquots" buttons and then "Settings" button. Filters
+can be defined in the second column ("Filters") on the displayed page and currently can be defined for the
+following fields:
+<br>
+<br><b>Persons filter:</b> Age, Diabetes status, Gender, Ethnicity, Person source
+<br><b>Sample filter:</b> Sample type, Location, Storage condition, Transport condition, Reception status
+<br><b>Aliquot filter:</b> Location, Planned user, Fitness for use, Transport condition, Reception status
+<br>
+<br>To include a particular field in search, select one or more values from the corresponding list (to select multiple
+values or deselect already selected ones use Ctrl key + mouse click). Filters are conjunctive, i.e. if a field is included
+in search, database entries satisfying filter values for this field <b>AND</b> filter values for all other
+fields will be found. If no values for a field are selected, the field is not included in search (i.e. the result is equal to that of search
+with all values for this field included in filter, however the search process is more efficient).
+Person filter applies also to Sample/Aliquot reports, i.e. only samples aliquots for Persons satisfying Person filter will
+be shown. Similarly, Sample filter affects also Aliquot reports.
+<br>
+<br>After the defining a filter return to report page by pressing "OK" (or "Cancel", if you do not wish to keep changes)
+button. To obtain report conforming to the selected filters press the required of "Persons/Samples/Aliquots" buttons.
+<br>
+<br>You can chose which fields will be displayed in report. To do this go to the corresponding "Settings" page and mark
+the required fields in the second column ("Show Setting name") on the displayed page.
+<br>
+<br><b>Disclaimer.</b> Reports page is mainly intended for creating of reports. The process involves downloading the entire content
+of the database, followed by subsequential processing on user machine. As a result the process can be comparatively
+slow; although technically Reports page might offer more advanced browsing options than Persons/Samples/Aliquots pages,
+it is not recommended for database browsing.
+
+<br>
+<br>Links to other help pages:
+
+<br><br><a href="./help_login.html" target="popup" >
+	Login help page</a>
+<br><a href="./help_persons.html" target="popup" >
+	Persons help page</a>
+<br><a href="./help_samples.html" target="popup" >
+	Samples help page</a>
+<br><a href="./help_aliquots.html" target="popup" >
+	Aliquots help page</a>
+<br><a href="./help_search.html" target="popup" >
+	Search help page</a>
+<br><a href="./help_reports.html" target="popup" >
+	Reports help page</a>
+
+<br><br>Currently the system is hosted and administered by Institute of Mathematics and Computer Science. For enquiries contact
+<a href="mailto:jviksna@.mii.lu.lv">jviksna@mii.lu.lv</a>.
+<br>The supported browsers are <i>Internet Explorer</i> and <i>Netscape</i>. Other web browsers might work, but generally
+are not being tested.
+
+<table><tr><td><a></a></td></tr><tr><td><a></a></td></tr></table>
+
+  <table id="contentblock" cellPadding = "5" cellSpacing = "0">
+    <tr id="nav">
+	 <td><a></a></td>
+       <td width="100%"><a></a></td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="icapture.hibernate">
+  <class name="ShipCont" table="tblshipcont">
+    <id column="shipContID" name="id">
+      <generator class="native"/>
+    </id>
+    <property column="shipContID" insert="false" name="shipContID" not-null="true" update="false"/>
+    <many-to-one class="Shipment" column="shipmentID" name="shipment" not-null="true"/>
+    <many-to-one class="Container" column="containerID" name="container" not-null="true"/>
+  </class>
+</hibernate-mapping>

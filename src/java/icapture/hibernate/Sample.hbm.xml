@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="icapture.hibernate">
+  <class name="Sample" table="tblsamples">
+    <id column="sampleID" name="id">
+      <generator class="native"/>
+    </id>
+    <property column="sampleID" insert="false" name="sampleID" not-null="true" update="false"/>
+    <property column="name" name="sampleName" not-null="true"/>
+    <property column="valid" name="valid" not-null="true"/>
+    <many-to-one class="Sample" column="parentID" name="parent" not-null="false"/>
+    <many-to-one class="SampleType" column="sampleTypeID" name="sampleType" not-null="false"/>
+    <many-to-one class="SampleProcess" column="sampleProcessID" name="sampleProcess" not-null="false"/>
+    <many-to-one class="Subject" column="subjectID" name="subject" not-null="true"/>
+    <property column="collectionDate" name="dateCollected" not-null="false"/>
+    <property column="extractionDate" name="dateExtracted" not-null="false"/>
+    <property column="comments" name="comments" not-null="false"/>
+    <many-to-one class="User" column="created_by" name="creator" not-null="true"/>
+    <property column="created" name="createDate" not-null="true"/>
+  </class>
+</hibernate-mapping>

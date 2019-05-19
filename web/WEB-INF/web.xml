@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+    <context-param>
+        <param-name>viewlimit</param-name>
+        <param-value>1000</param-value>
+    </context-param>
+    <context-param>
+        <param-name>seconduser</param-name>
+        <param-value>administrator/administrator</param-value>
+    </context-param>
+    <listener>
+        <listener-class>icapture.com.SessionListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>icapture.com.ApplicationListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>ImageServlet</servlet-name>
+        <servlet-class>
+            net.sf.jasperreports.j2ee.servlets.ImageServlet
+        </servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DownloadSampleDocuments</servlet-name>
+        <servlet-class>
+            icapture.com.DownloadSampleDocuments
+        </servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FilenameValidator</servlet-name>
+        <servlet-class>
+            icapture.com.FilenameValidator
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ImageServlet</servlet-name>
+        <url-pattern>/image</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DownloadSampleDocuments</servlet-name>
+        <url-pattern>/dlSampDoc</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FilenameValidator</servlet-name>
+        <url-pattern>/FilenameValidate</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>LogIn.jsp</welcome-file>
+    </welcome-file-list>
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/Test_JSP_error.jsp</location>
+    </error-page>
+
+</web-app>

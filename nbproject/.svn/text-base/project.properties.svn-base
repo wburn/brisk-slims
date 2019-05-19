@@ -1,0 +1,163 @@
+annotation.processing.enabled=true
+annotation.processing.enabled.in.editor=true
+annotation.processing.processors.list=
+annotation.processing.run.all.processors=true
+annotation.processing.source.output=${build.generated.sources.dir}/ap-source-output
+build.classes.dir=${build.web.dir}/WEB-INF/classes
+build.classes.excludes=**/*.java,**/*.form
+build.dir=build
+build.generated.dir=${build.dir}/generated
+build.generated.sources.dir=${build.dir}/generated-sources
+build.test.classes.dir=${build.dir}/test/classes
+build.test.results.dir=${build.dir}/test/results
+build.web.dir=${build.dir}/web
+build.web.excludes=${build.classes.excludes}
+client.urlPart=
+compile.jsps=false
+conf.dir=conf
+debug.classpath=${build.classes.dir}:${javac.classpath}
+debug.test.classpath=\
+    ${run.test.classpath}
+display.browser=true
+dist.dir=dist
+dist.ear.war=${dist.dir}/${war.ear.name}
+dist.javadoc.dir=${dist.dir}/javadoc
+dist.war=${dist.dir}/${war.name}
+endorsed.classpath=
+excludes=
+file.reference.antlr-2.7.6.jar=lib/antlr-2.7.6.jar
+file.reference.asm.jar=lib/asm.jar
+file.reference.c3p0-0.9.1.jar=lib/c3p0-0.9.1.jar
+file.reference.cglib-2.1.3.jar=lib/cglib-2.1.3.jar
+file.reference.commons-collections-3.1.jar=lib/commons-collections-3.1.jar
+file.reference.commons-fileupload-1.2.1.jar=lib/commons-fileupload-1.2.1.jar
+file.reference.commons-io-1.4.jar=lib/commons-io-1.4.jar
+file.reference.commons-javaflow-20060411.jar=lib/commons-javaflow-20060411.jar
+file.reference.commons-logging-1.0.4.jar=lib\\commons-logging-1.0.4.jar
+file.reference.concurrent-1.3.2.jar=lib/concurrent-1.3.2.jar
+file.reference.cos.jar=lib/cos.jar
+file.reference.db2jcc.jar=lib/db2jcc.jar
+file.reference.db2jcc_javax.jar=lib/db2jcc_javax.jar
+file.reference.db2jcc_license_cu.jar=lib/db2jcc_license_cu.jar
+file.reference.derby.jar=lib/derby.jar
+file.reference.dom4j-1.6.1.jar=lib/dom4j-1.6.1.jar
+file.reference.ehcache-1.2.3.jar=lib/ehcache-1.2.3.jar
+file.reference.fileupload.jar=lib/fileupload.jar
+file.reference.h2.jar=lib/h2.jar
+file.reference.hibernate3.jar=lib/hibernate3.jar
+file.reference.iText-2.1.5.jar=lib/iText-2.1.5.jar
+file.reference.jacc-1_0-fr.jar=lib/jacc-1_0-fr.jar
+file.reference.jasperreports-3.5.1-javaflow.jar=lib\\jasperreports-3.5.1-javaflow.jar
+file.reference.jasperreports-3.5.1.jar=lib\\jasperreports-3.5.1.jar
+file.reference.javassist-3.4.GA.jar=lib/javassist-3.4.GA.jar
+file.reference.jaxen-1.1-beta-7.jar=lib/jaxen-1.1-beta-7.jar
+file.reference.jdbc2_0-stdext.jar=lib/jdbc2_0-stdext.jar
+file.reference.jta-1.1.jar=lib/jta-1.1.jar
+file.reference.jta.jar=lib/jta.jar
+file.reference.jxl.jar=lib/jxl.jar
+file.reference.log4j-1.2.11.jar=lib/log4j-1.2.11.jar
+file.reference.mysql-connector-java-5.1.7-bin.jar=lib/mysql-connector-java-5.1.7-bin.jar
+file.reference.postgresql-8.2-506.jdbc3.jar=lib/postgresql-8.2-506.jdbc3.jar
+file.reference.slf4j-api-1.5.2.jar=lib/slf4j-api-1.5.2.jar
+file.reference.slf4j-simple-1.5.2.jar=lib/slf4j-simple-1.5.2.jar
+file.reference.src-java=src/java
+file.reference.struts.jar=lib/struts.jar
+file.reference.Support.jar=lib/Support.jar
+file.reference.uploadbean.jar=lib/uploadbean.jar
+file.reference.xercesImpl.jar=lib/xercesImpl.jar
+file.reference.xml-apis.jar=lib/xml-apis.jar
+includes=**
+j2ee.deploy.on.save=true
+j2ee.platform=1.5
+j2ee.platform.embeddableejb.classpath=${j2ee.server.home}\\lib\\embedded\\glassfish-embedded-static-shell.jar
+j2ee.server.type=Tomcat60
+jar.compress=false
+java.source.based=true
+javac.classpath=\
+    ${file.reference.antlr-2.7.6.jar}:\
+    ${file.reference.asm.jar}:\
+    ${file.reference.c3p0-0.9.1.jar}:\
+    ${file.reference.cglib-2.1.3.jar}:\
+    ${file.reference.commons-collections-3.1.jar}:\
+    ${file.reference.commons-fileupload-1.2.1.jar}:\
+    ${file.reference.commons-io-1.4.jar}:\
+    ${file.reference.commons-javaflow-20060411.jar}:\
+    ${file.reference.concurrent-1.3.2.jar}:\
+    ${file.reference.cos.jar}:\
+    ${file.reference.db2jcc.jar}:\
+    ${file.reference.db2jcc_javax.jar}:\
+    ${file.reference.db2jcc_license_cu.jar}:\
+    ${file.reference.derby.jar}:\
+    ${file.reference.dom4j-1.6.1.jar}:\
+    ${file.reference.ehcache-1.2.3.jar}:\
+    ${file.reference.fileupload.jar}:\
+    ${file.reference.h2.jar}:\
+    ${file.reference.hibernate3.jar}:\
+    ${file.reference.iText-2.1.5.jar}:\
+    ${file.reference.jacc-1_0-fr.jar}:\
+    ${file.reference.javassist-3.4.GA.jar}:\
+    ${file.reference.jaxen-1.1-beta-7.jar}:\
+    ${file.reference.jdbc2_0-stdext.jar}:\
+    ${file.reference.jta-1.1.jar}:\
+    ${file.reference.jta.jar}:\
+    ${file.reference.jxl.jar}:\
+    ${file.reference.log4j-1.2.11.jar}:\
+    ${file.reference.mysql-connector-java-5.1.7-bin.jar}:\
+    ${file.reference.postgresql-8.2-506.jdbc3.jar}:\
+    ${file.reference.slf4j-api-1.5.2.jar}:\
+    ${file.reference.slf4j-simple-1.5.2.jar}:\
+    ${file.reference.struts.jar}:\
+    ${file.reference.uploadbean.jar}:\
+    ${file.reference.xercesImpl.jar}:\
+    ${file.reference.xml-apis.jar}:\
+    ${file.reference.jasperreports-3.5.1-javaflow.jar}:\
+    ${file.reference.jasperreports-3.5.1.jar}:\
+    ${file.reference.commons-logging-1.0.4.jar}:\
+    ${file.reference.Support.jar}
+# Space-separated list of extra javac options
+javac.compilerargs=
+javac.debug=true
+javac.deprecation=false
+javac.processorpath=${javac.classpath}
+javac.source=1.5
+javac.target=1.5
+javac.test.classpath=\
+    ${javac.classpath}:\
+    ${build.classes.dir}:\
+    ${libs.junit.classpath}:\
+    ${libs.junit_4.classpath}
+javac.test.processorpath=${javac.test.classpath}
+javadoc.additionalparam=
+javadoc.author=false
+javadoc.encoding=${source.encoding}
+javadoc.noindex=false
+javadoc.nonavbar=false
+javadoc.notree=false
+javadoc.preview=true
+javadoc.private=false
+javadoc.splitindex=true
+javadoc.use=true
+javadoc.version=false
+javadoc.windowtitle=
+jaxbwiz.endorsed.dirs="${netbeans.home}/../ide12/modules/ext/jaxb/api"
+jspcompilation.classpath=${jspc.classpath}:${javac.classpath}
+lib.dir=lib
+persistence.xml.dir=${conf.dir}
+platform.active=default_platform
+resource.dir=setup
+run.test.classpath=\
+    ${javac.test.classpath}:\
+    ${build.test.classes.dir}
+# Space-separated list of JVM arguments used when running a class with a main method or a unit test
+# (you may also define separate properties like run-sys-prop.name=value instead of -Dname=value):
+runmain.jvmargs=
+source.encoding=UTF-8
+source.root=.
+src.dir=${file.reference.src-java}
+src.java.dir=src\\java
+test.src.dir=
+war.content.additional=
+war.ear.name=SampleTracking.war
+war.name=SampleTracking.war
+web.docbase.dir=web
+webinf.dir=web/WEB-INF

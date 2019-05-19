@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1_subreport1_subreport1" pageWidth="802" pageHeight="517" orientation="Landscape" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<subDataset name="dataset1"/>
+	<parameter name="containerID" class="java.lang.Long" isForPrompting="false"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Documents and Settings\\tvanrossum\\My Documents\\NetBeansProjects\\SampleTracking\\src\\java\\reports\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     tblsamples.name as sampleName,
+     tblsamples.sampleID,
+     tblcontainercontents.*,
+     tblcohortlookup.name as cohort
+
+FROM
+     tblcontainercontents INNER JOIN tblsamples ON tblcontainercontents.sampleID = tblsamples.sampleID
+	JOIN tblsubject ON tblsubject.subjectID=tblsamples.subjectID
+	JOIN tblcohortlookup ON tblsubject.cohortID=tblcohortlookup.cohortID
+WHERE
+	tblcontainercontents.containerid = 1392
+ORDER BY
+     tblcontainercontents.row ,tblcontainercontents.column ,tblsamples.parentID]]>
+	</queryString>
+	<field name="SAMPLENAME" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SAMPLEID" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CONTAINERID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ROW" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="COLUMN" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="VOLUME" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CONCENTRATION" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CONTAINERCONTENTSID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PARENTID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CONTAMINATED" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DILUTION" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="COMMENTS" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CREATED" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CREATED_BY" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MODIFIED" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MODIFIED_BY" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="QUANTIFIED" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MATERIALTYPEID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="AMPLIFICATIONDATE" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BARCODE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="COHORT" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="ROWAlpha" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<detail>
+		<band height="20">
+			<staticText>
+				<reportElement mode="Transparent" x="735" y="-1" width="67" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Transparent" x="45" y="0" width="85" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SAMPLENAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="130" y="0" width="35" height="20" forecolor="#000000" backcolor="#FFFFFF">
+					<printWhenExpression><![CDATA[new Boolean(!$F{VOLUME}.equals(new Integer(-1)))]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{VOLUME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="192" y="0" width="35" height="20" forecolor="#000000" backcolor="#FFFFFF">
+					<printWhenExpression><![CDATA[new Boolean(!$F{CONCENTRATION}.equals(new Double(-1.0)))]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{CONCENTRATION}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Transparent" x="286" y="-1" width="38" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Parent:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="735" y="0" width="67" height="20" forecolor="#FF0000" backcolor="#FFFFFF">
+					<printWhenExpression><![CDATA[new Boolean($F{CONTAMINATED}.equals(new Integer(1)))]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Contaminated]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Transparent" x="19" y="0" width="15" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{COLUMN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Transparent" x="165" y="0" width="21" height="20" forecolor="#000000" backcolor="#FFFFFF">
+					<printWhenExpression><![CDATA[new Boolean(!$F{VOLUME}.equals(new Integer(-1)))]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[ uL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="227" y="0" width="32" height="20" forecolor="#000000" backcolor="#FFFFFF">
+					<printWhenExpression><![CDATA[new Boolean(!$F{CONCENTRATION}.equals(new Double(-1.0)))]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[ ng/uL]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Transparent" x="4" y="0" width="15" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[(($F{ROW}.compareTo( new Integer(1))==0) ? "A"
+            : ($F{ROW}.compareTo( new Integer(2)) == 0) ? "B"
+            : ($F{ROW}.compareTo( new Integer(3)) == 0) ? "C"
+            : ($F{ROW}.compareTo( new Integer(4)) == 0) ? "D"
+            : ($F{ROW}.compareTo( new Integer(5)) == 0) ? "E"
+            : ($F{ROW}.compareTo( new Integer(6)) == 0) ? "F"
+            : ($F{ROW}.compareTo( new Integer(7)) == 0) ? "G"
+            : ($F{ROW}.compareTo( new Integer(8)) == 0) ? "H"
+            : ($F{ROW}.compareTo( new Integer(9)) == 0) ? "I"
+            : ($F{ROW}.compareTo( new Integer(10)) == 0) ? "J"
+            : ($F{ROW}.compareTo( new Integer(11)) == 0) ? "K"
+            : ($F{ROW}.compareTo( new Integer(12)) == 0) ? "L"
+            : ($F{ROW}.compareTo( new Integer(13)) == 0) ? "M"
+            : ($F{ROW}.compareTo( new Integer(14)) == 0) ? "N"
+            : ($F{ROW}.compareTo( new Integer(15)) == 0) ? "O"
+            : ($F{ROW}.compareTo( new Integer(16)) == 0) ? "P"
+            : ($F{ROW}.compareTo( new Integer(17)) == 0) ? "Q"
+            : ($F{ROW}.compareTo( new Integer(18)) == 0) ? "R"
+            : ($F{ROW}.compareTo( new Integer(19)) == 0) ? "S"
+            : ($F{ROW}.compareTo( new Integer(20)) == 0) ? "T"
+            : ($F{ROW}.compareTo( new Integer(21)) == 0) ? "U"
+            : ($F{ROW}.compareTo( new Integer(22)) == 0) ? "V"
+            : ($F{ROW}.compareTo( new Integer(23)) == 0) ? "W"
+            : ($F{ROW}.compareTo( new Integer(24)) == 0) ? "X"
+            : ($F{ROW}.compareTo( new Integer(25)) == 0) ? "Y"
+            : ($F{ROW}.compareTo( new Integer(26)) == 0) ? "Z" : "")]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="324" y="0" width="277" height="20"/>
+				<subreportParameter name="PARENTID">
+					<subreportParameterExpression><![CDATA[$F{PARENTID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "ParentContainerContents_by_containerContentsID.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement x="0" y="19" width="802" height="1"/>
+			</line>
+			<line>
+				<reportElement x="259" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="191" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="130" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="34" y="-1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="600" y="-1" width="1" height="20"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

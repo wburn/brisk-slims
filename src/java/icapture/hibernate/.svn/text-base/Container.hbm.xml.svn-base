@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="icapture.hibernate">
+    <class name="Container" table="tblcontainers">
+        <id column="containerID" name="id">
+            <generator class="native"/>
+        </id>
+        <property column="containerID" insert="false" name="containerID" not-null="true" update="false"/>
+        <property column="containerName" name="containerName" not-null="true"/>
+        <many-to-one column="containerTypeID" name="containerType" not-null="true"/>
+        <many-to-one column="freezerID" name="freezer" not-null="false"/>
+        <property column="shelf" name="shelf" not-null="false"/>
+        <property column="discarded" name="discarded" not-null="true"/>
+        <property column="comments" name="comments" not-null="false"/>
+        <property column="stock" name="isStock" not-null="true"/>
+        <property column="valid" name="valid" not-null="true"/>
+        <property column="containerAlias" name="containerAlias" not-null="false"/>
+        <property column="lot" name="lot" not-null="false"/>
+        <property column="initials" name="initials" not-null="false"/>
+        <many-to-one class="User" column="created_by" name="creator" not-null="true"/>
+        <property column="created" name="createDate" not-null="true"/>
+        <property column="date" name="dateOnContainer" not-null="false"/>
+        <property column="location" name="location" not-null="false"/>
+        <property column="barcode" name="barcode" not-null="false"/>
+        <property column="checkedOut" name="checkedOut" not-null="false"/>
+        <list name="ShipCont" inverse="true" table="tblshipcont" fetch="select" lazy="false">
+            <key>
+                <column name="containerID" not-null="true" />
+            </key>
+            <index column="shipContID"/>
+            <one-to-many class="ShipCont" />
+        </list>
+
+    </class>
+</hibernate-mapping>

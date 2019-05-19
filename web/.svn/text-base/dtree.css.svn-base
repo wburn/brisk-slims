@@ -1,0 +1,136 @@
+/*--------------------------------------------------|
+| dTree 2.05 | www.destroydrop.com/javascript/tree/ |
+|---------------------------------------------------|
+| Copyright (c) 2002-2003 Geir Landr�               |
+|--------------------------------------------------*/
+
+#simplemodal-overlay {background-color:#ffffff;}
+#simplemodal-container {background-color:#ffffff; border:8px solid #6D97C1; padding:12px;}
+
+
+label.error  {
+    background: url("images/ignore.png") no-repeat scroll 0 0 transparent;
+    color:#FF0000;
+    font-weight:bold;
+    padding-bottom:2px;
+    padding-left:16px;
+    margin-left: 4px;
+}
+
+label.checked {
+    background: url("images/ok.png") no-repeat scroll 0 0 transparent;
+    margin-left: 4px;
+}
+
+input.error {
+    font-size: 13px;
+    border-color: #FF0000;
+}
+
+select.error {
+    font-size: 13px;
+    border-color: #FF0000;
+}
+
+img.concenWarnTooltip {
+    border-width: 0;
+}
+a.concenWarnTooltip span {
+    display:none;
+    padding:2px 3px;
+    margin-left:8px;
+    width:130px;
+}
+a.concenWarnTooltip:hover span{
+    display:inline;
+    position:absolute;
+    border:1px solid #cccccc;
+    background:#ffffff;
+    color:#6c6c6c;
+    text-decoration: none;
+}
+.legend{
+    z-index: 3;
+    float: right;
+    width: 31%;
+    padding:10px;
+}
+.legend a.showHide{
+    color: #000000;
+    text-decoration: none;
+}
+.legend a.showHide:hover{
+    color: #000000;
+    text-decoration: underline;
+}
+.legend .showlegend{
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: left;
+    text-decoration: none;
+}
+.legend .treelegend {
+    width: 30%;
+}
+
+
+.tooltip{
+    position: absolute;
+    padding: 5px 8px;
+    z-index: 2;
+
+    color: #000000;
+    background-color: #fdfde1;
+    border: 1px solid #c9c871;
+
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: left;
+    text-decoration: none;
+}
+
+#logoutWarning{
+    position: absolute;
+    padding: 5px 8px;
+
+    color: #000000;
+    background-color: #fdfde1;
+    border: 1px solid #c9c871;
+
+    font-weight: normal;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 18px;
+    text-decoration: none;
+}
+.dtree {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #000000;
+    white-space: nowrap;
+    padding: 10px;
+}
+.dtree img {
+    border: 0px;
+    vertical-align: middle;
+}
+.dtree a {
+    color: #000000;
+    text-decoration: none;
+}
+.dtree a.node, .dtree a.nodeSel {
+    white-space: nowrap;
+    padding: 1px 1px 1px 1px;
+}
+.dtree a.node:hover, .dtree a.nodeSel:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+.dtree a.nodeSel {
+    background-color: #c0d2ec;
+}
+.dtree .clip {
+    overflow: hidden;
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="icapture.hibernate">
+  <class name="Subject" table="tblsubject">
+    <id column="subjectID" name="id">
+      <generator class="native"/>
+    </id>
+    <property column="subjectID" insert="false" name="subjectID" not-null="true" update="false"/>
+    <property column="ID" name="subjectName" not-null="true"/>
+    <property column="fatherID" name="fatherName" not-null="true"/>
+    <property column="motherID" name="motherName" not-null="true"/>
+    <many-to-one class="Cohort" column="cohortID" name="cohort" not-null="true"/>
+    <property column="gender" name="gender" not-null="true"/>
+    <property column="hasconsent" name="hasConsent" not-null="true"/>
+    <property column="familyID" name="familyID" not-null="true"/>
+    <many-to-one class="Ethnicity" column="ethnicityID" name="ethnicity" not-null="true"/>
+    <property column="comment" name="comments" not-null="false"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ParentContainerContents_by_containerContentsID" pageWidth="200" pageHeight="20" columnWidth="200" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<parameter name="PARENTID" class="java.lang.Integer" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[SELECT
+     TBLCONTAINERCONTENTS."ROW" AS ROW,
+     TBLCONTAINERCONTENTS."COLUMN" AS TBLCONTAINERCONTENTS_COLUMN,
+     TBLCONTAINERCONTENTS."CONTAINERID" AS TBLCONTAINERCONTENTS_CONTAINER,
+     TBLCONTAINERS."CONTAINERID" AS TBLCONTAINERS_CONTAINERID,
+     TBLCONTAINERS."CONTAINERNAME" AS TBLCONTAINERS_CONTAINERNAME
+FROM
+     "TBLCONTAINERCONTENTS" TBLCONTAINERCONTENTS,
+     "TBLCONTAINERS" TBLCONTAINERS
+WHERE
+TBLCONTAINERCONTENTS.containerContentsID = $P{PARENTID} AND
+TBLCONTAINERCONTENTS.containerID = TBLCONTAINERS.containerID]]>
+	</queryString>
+	<field name="ROW" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TBLCONTAINERCONTENTS_COLUMN" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TBLCONTAINERCONTENTS_CONTAINER" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TBLCONTAINERS_CONTAINERID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TBLCONTAINERS_CONTAINERNAME" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<detail>
+		<band height="20">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="200" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TBLCONTAINERS_CONTAINERNAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

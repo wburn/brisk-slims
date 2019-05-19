@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="icapture.hibernate">
+  <class name="ShoppingList" table="tblshoppinglists">
+    <id column="listid" name="listID">
+      <generator class="native"/>
+    </id>
+    <property column="listid" insert="false" name="listID" not-null="true" update="false"/>
+    <property column="listname" name="listName" not-null="true"/>
+    <many-to-one column="created_by" name="creator" not-null="true"/>
+    <many-to-one column="modified_by" name="modifier"/>
+    <property column="created" name="createDate" not-null="true"/>
+    <property column="modified" name="modifDate"/>
+    <many-to-one column="inuseby" name="inUseBy" not-null="false"/>
+  </class>
+</hibernate-mapping>

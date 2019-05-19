@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="icapture.hibernate">
+  <class name="Genotype" table="tblgenotypes">
+    <id column="genotypeID" name="id">
+      <generator class="native"/>
+    </id>
+    <property column="genotypeID" insert="false" name="genotypeID" not-null="true" update="false"/>
+    <property column="allele1" name="allele1" not-null="true"/>
+    <property column="allele2" name="allele2" not-null="true"/>
+    <many-to-one class="ContainerContent" column="containerContentsID" name="containerContents" not-null="true"/>
+    <many-to-one class="GenotypingRun" column="genotypingRunID" name="genotypingRun" not-null="true"/>
+    <many-to-one class="Snp" column="snpID" name="snp" not-null="true"/>
+  </class>
+</hibernate-mapping>

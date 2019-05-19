@@ -1,0 +1,185 @@
+body { padding: 0px; font-size: 12px; font-family: Arial; background-color: white;}
+
+table.toptable { font-size: 12px; background-color: white; border-spacing: 5px; border: inset 0px; text-align: left; }
+
+.roundtable { font-size: 1px; background-color: white; padding: 0px; border-spacing: 0px; border:0px; text-align: left; }
+
+
+table { font-size: 12px; background-color: #E5EFF0; border-spacing: 5px; border: inset 0px; text-align: left; }
+tr { vertical-align: top; }
+tr td { padding-left: 2px;}
+
+table.navigate {font-size: 12px;  border-spacing:10pt}
+table.spaced {font-size: 12px;  border-spacing:10pt}
+
+.dialh { padding-top: 5px; text-align: right }
+.dialhLeft { padding-top: 5px; text-align: left }
+
+.settingLeft { padding-left: 10px; text-align: right }
+
+.stripeoff { font-size: 11px; }
+.stripeon { background-color: #f0f8ff; font-weight: normal; font-size: 11px; }
+.soff { font-size: 11px; background-color: #d2dbe6; }
+.son { background-color: #f0f8ff; font-weight: normal; font-size: 11px; }
+.listStripeOff { font-size: 11px; background-color: #ADD8E6; }
+.listStripeOn { background-color: #C6E6F3; font-weight: normal; font-size: 11px; }
+.curroff { font-size: 11px; }
+.curron { font-weight: normal; font-size: 11px; }
+.curroffRed { color: #f00; background-color: #d2dbe6; font-size: 11px; }
+.curronRed { color: #f00; background-color: #f0f8ff; font-weight: normal; font-size: 11px; }
+.list { color: #f00; background-color: #F0FFF0; }
+.disable { display: none; }
+
+.smallest { font-size: 8px; }
+.smaller { font-size: 10px; }
+.largest { font-size: 16px; font-weight: bold; }
+.larger { font-size: 14px; font-weight: bold; }
+.tittle { font-size: 12px; font-weight: bold; }
+.error { font-size: 12px; color: #f00; }
+.buttonSmall { font-size: 10px;}
+.button { font-size: 11px;}
+.normal  { text-decoration: none;      font-weight: bold; font-size: 11px; color: #000; }
+.normalu { text-decoration: none; font-weight: bold; font-size: 11px; color: #000; }
+.normalo { text-decoration: none;  font-weight: bold; font-size: 11px; color: #000; }
+
+.view_table { width: 100%; }
+#9DB9D5
+.nav td{ margin: 0; font-size: 90%; color: #003; background-color: #6D97C1; padding-left: 10px; padding-right: 10px; text-align: center; vertical-align:middle}
+.nav select{ margin: 0; color: #003; background-color: #E5EAF0; text-align: center; vertical-align:middle}
+.nav a:link, .nav a:visited { color: #ddd; background-color: transparent; text-decoration: none; }
+.nav a:hover, nav a:active { color: #fff; background-color: transparent; }
+
+table.separate { font-size: 12px; border-collapse: collapse;}
+td.separate {border-right: 3px solid #E5EAF0; vertical-align:middle; font-size:11pt; font-weight:bold}
+td.navBar {font-size:11pt; font-weight:bold}
+
+#selectedtop a{ color: #003; background-color: #E5EAF0; padding: 0 3px 7px; }
+#selectedbottom a{ color: #003; background-color: #E5EAF0; padding: 7px 3px 0; }
+
+.unselCell {font-size: 11px; border: inset 1px; }
+.selCell { background-color: #fff; font-size: 11px; border: inset 1px; }
+
+#kluda { background-color: #F0C0C0; }
+
+.headerOdd { background-color: #b3cfef; }
+.headerEven { background-color: #9dc2ef;}
+
+.action { background-color:#B9E0BA; font-weight:bold}
+.actionBlue { background-color:#B4CFEA; font-size: 12px; font-weight: bold}
+.subHeader { background-color:#B4CFEA; font-size: 14px; font-weight: bold; width:100%; border-bottom:medium solid black}
+.subSubHeader { font-size: 14px; font-weight: bold; width:100%; border-bottom:medium solid black}
+.instructions {font-size: 12px; background-color:#FBFBFB; padding:5px}
+table.instructions { font-size: 12px; background-color:#FBFBFB; padding:5px;border-spacing:10pt}
+
+table.results {
+    font-size: 12px; 
+    padding: 10px;
+	border-style: inset;
+	border-color: #d2dbe6;
+	border-collapse: collapse;
+	background-color: #f0f8ff;
+    border-spacing:10pt
+}
+table.results td {
+	border-width: 0px;
+	border-style: inset;
+	border-color: #d2dbe6;
+	padding: 1px 10px;
+}
+table.results th {
+	border-width: 0px;
+	border-style: inset;
+	border-color: #d2dbe6;
+	padding: 1px 10px;
+}
+table.sample {
+    font-size: 12px; 
+	border-width: 0px;
+	border-spacing: 0px;
+	border-style: inset;
+	border-color: #d2dbe6;
+	border-collapse: collapse;
+	background-color: #d8e4eb;
+}
+table.sample td {
+	border-width: 0px;
+	border-style: inset;
+	border-color: #d2dbe6;
+	padding: 1px 10px;
+}
+table.sample td.left {
+	border-width: 0px 1px 0px 0px;
+	padding: 1px 10px;
+}
+table.sample td.left1 {
+	padding: 1px 0px 1px 10px;
+}
+table.sample td.right1 {
+	padding: 1px 10px 1px 0px;
+}
+.lines {
+	align:center;valign:middle;width:24px;height:21px;
+}
+
+table.plate {
+    font-size: 10px;
+	border-width: medium medium medium medium;
+	border-spacing: 1px;
+	border-style: outset outset outset outset;
+	border-color: gray gray gray gray;
+	border-collapse: separate;
+	background-color: white;
+    table-layout:fixed;
+}
+table.plate td {
+    text-align:center;
+    vertical-align:middle;
+	border-width: 2px;
+	padding: 1px;
+	border-style: inset inset inset inset;
+	border-color: gray gray gray gray;
+	background-color: rgb(238, 241, 245);
+	-moz-border-radius: 2px;
+}
+table.clearSide {
+	border-width: medium medium medium medium;
+	border-spacing: 1px;
+	border-style: none;
+	border-color: gray gray gray gray;
+	border-collapse: separate;
+    table-layout:fixed;
+    width:10px;
+    height:320px;
+    font-weight:bold;
+}
+table.clearSide td {
+    text-align:center;
+    vertical-align:bottom;
+	border-width: 2px;
+	padding: 1px;
+	border-style: none;
+	border-color: gray gray gray gray;
+	-moz-border-radius: 2px;
+}
+table.clearTop {
+    font-size: 12px; 
+	border-width: medium medium medium medium;
+	border-spacing: 1px;
+	border-style: none;
+	border-color: gray gray gray gray;
+	border-collapse: separate;
+    table-layout:fixed;
+    width:480px;
+    height:10px;
+    font-weight:bold;
+}
+table.clearTop td {
+    text-align:center;
+    vertical-align:middle;
+	border-width: 2px;
+	padding: 1px 1px 1px 1px;
+	border-style: none;
+	border-color: gray gray gray gray;
+	-moz-border-radius: 2px;
+}
+

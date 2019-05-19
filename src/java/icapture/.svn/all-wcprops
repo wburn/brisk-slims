@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/3/trunk/src/java/icapture
+END
+DBQuerier.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/src/java/icapture/DBQuerier.java
+END
+CNGDataLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/src/java/icapture/CNGDataLoader.java
+END
+SampleLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2/trunk/src/java/icapture/SampleLoader.java
+END
+AVSDataLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/src/java/icapture/AVSDataLoader.java
+END
+GRR.java
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/src/java/icapture/GRR.java
+END
+ImportTools.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2/trunk/src/java/icapture/ImportTools.java
+END
+AllergenGWASDataLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2/trunk/src/java/icapture/AllergenGWASDataLoader.java
+END
+MakePlinkFiles.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/trunk/src/java/icapture/MakePlinkFiles.java
+END
+Tools.java
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/src/java/icapture/Tools.java
+END
